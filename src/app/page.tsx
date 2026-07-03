@@ -1,26 +1,8 @@
 import { MainLayout } from "../layouts/main/main-layout";
-import { SkillCard } from "../components/skill-card/skill-card";
+import { SkillSection } from "../components/skill-section/skill-section";
 import { WorkCard } from "../components/work-card/work-card";
 
-const skills = [
-  {
-    title: "Next.js",
-    description:
-      "ページ作成、ルーティング、コンポーネント分割を練習しています。",
-  },
-  {
-    title: "Tailwind CSS",
-    description: "classNameを使って、余白、色、レイアウトを調整できます。",
-  },
-  {
-    title: "GitHub",
-    description: "ブランチ、コミット、push、PR作成を練習しています。",
-  },
-  {
-    title: "TypeScript",
-    description: "型を使って、コードのミスに早く気づけるようにします。",
-  }
-];
+
 
 const works = [
   {
@@ -47,18 +29,7 @@ export default function Home() {
           </p>
         </section>
 
-        <section id='skills'>
-          <h2 className="text-2xl font-bold text-neutral-900">Skills</h2>
-          <div className="grid gap-8 mt-6 md:grid-cols-3">
-            {skills.map((skill) =>(
-              <SkillCard
-                key={skill.title}
-                title={skill.title}
-                description={skill.description}
-              />
-            ))}
-          </div>
-        </section>
+        <SkillSection />
 
         <section id="works">
           <h2 className="text-2xl font-bold text-neutral-900">Works</h2>
